@@ -25,4 +25,7 @@ requires:
   Template::Plugin::Filter: 0
   Text::Haml: 0
   parent: 0
-version: 0.1.0
+resources:
+  bugtracker: http://github.com/xenoterracide/Template-Plugin-Haml/issues
+  repository: git://github.com/xenoterracide/Template-Plugin-Haml.git
+version: 0.1.1
