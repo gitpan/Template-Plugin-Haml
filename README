@@ -1,8 +1,8 @@
 NAME
-    Template::Plugin::Haml
+    Template::Plugin::Haml - Haml plugin for Template Toolkit
 
 VERSION
-    version 0.1.1
+    version 0.1.2
 
 SYNOPSIS
             [%- USE Haml -%]
@@ -14,7 +14,7 @@ SYNOPSIS
 
 DESCRIPTION
     A thin wrapper around Text::Haml when you load the plugin it creates a
-    filter called haml that you can use in a normal way. A full descritption
+    filter called haml that you can use in a normal way. A full description
     of the Haml language can be found on the haml site
     <http://haml-lang.com>. Haml is a terse and whitespace sensitive html,
     xhtml, and xml templating system. Compared to Template Toolkit however
@@ -87,7 +87,7 @@ DESCRIPTION
         initializes the the filter object
 
     filter
-        method that acutally does the transformation
+        method that actually does the transformation
 
 ACKNOWLEDGEMENTS
     Thanks to kd, mst, Khisanth, aef on #tt on irc.perl.org
@@ -95,16 +95,16 @@ ACKNOWLEDGEMENTS
     didn't work
 
 BUGS
-    HAML variables don't work
+    Haml variables don't work
         use TT style variables instead
 
 AUTHOR
     Caleb Cushing <xenoterracide@gmail.com>
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2010 by Caleb Cushing.
+    This software is Copyright (c) 2011 by Caleb Cushing.
 
     This is free software, licensed under:
 
-      The Artistic License 2.0
+      The Artistic License 2.0 (GPL Compatible)
 

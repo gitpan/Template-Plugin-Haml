@@ -1,8 +1,9 @@
+package Template::Plugin::Haml;
+use 5.006;
 use strict;
 use warnings;
-package Template::Plugin::Haml;
 BEGIN {
-  $Template::Plugin::Haml::VERSION = '0.1.1';
+	our $VERSION = '0.1.2'; # VERSION
 }
 
 use parent 'Template::Plugin::Filter';
@@ -12,7 +13,7 @@ sub init {
 	my $self = shift;
 	$self->{_DYNAMIC} = 1;
 	$self->install_filter( $self->{_ARGS}->[0] || 'haml');
-	$self;
+	return $self;
 }
 
 sub filter {
@@ -22,18 +23,18 @@ sub filter {
 	return $haml->render($text);
 }
 1;
-# ABSTACT: HAML plugin for Template Toolkit
+# ABSTRACT: Haml plugin for Template Toolkit
 
 __END__
 =pod
 
 =head1 NAME
 
-Template::Plugin::Haml
+Template::Plugin::Haml - Haml plugin for Template Toolkit
 
 =head1 VERSION
 
-version 0.1.1
+version 0.1.2
 
 =head1 SYNOPSIS
 
@@ -47,7 +48,7 @@ version 0.1.1
 =head1 DESCRIPTION
 
 A thin wrapper around L<Text::Haml> when you load the plugin it creates a
-filter called haml that you can use in a normal way. A full descritption of
+filter called haml that you can use in a normal way. A full description of
 the Haml language can be found on L<the haml site|http://haml-lang.com>. Haml
 is a terse and whitespace sensitive html, xhtml, and xml templating system.
 Compared to Template Toolkit however it is relatively limited in what you can
@@ -127,7 +128,7 @@ initializes the the filter object
 
 =item filter
 
-method that acutally does the transformation
+method that actually does the transformation
 
 =back
 
@@ -141,7 +142,7 @@ figure out why my first try didn't work
 
 =over
 
-=item HAML variables don't work
+=item Haml variables don't work
 
 use TT style variables instead
 
@@ -153,11 +154,11 @@ Caleb Cushing <xenoterracide@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by Caleb Cushing.
+This software is Copyright (c) 2011 by Caleb Cushing.
 
 This is free software, licensed under:
 
-  The Artistic License 2.0
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
 
